@@ -5,7 +5,7 @@ VERSION = 0.7
 
 # paths
 PREFIX = /usr/local
-MANPREFIX = ${PREFIX}/share/man
+MANPREFIX = ${PREFIX}/man
 
 X11INC = /usr/X11R6/include
 X11LIB = /usr/X11R6/lib
@@ -14,7 +14,7 @@ X11LIB = /usr/X11R6/lib
 INCS = -I. -I/usr/include -I${X11INC} \
        `pkg-config --cflags fontconfig` \
        `pkg-config --cflags freetype2`
-LIBS = -L/usr/lib -lc -L${X11LIB} -lm -lrt -lX11 -lutil -lXft \
+LIBS = -L/usr/lib -lc -L${X11LIB} -lm -lX11 -lutil -lXft \
        `pkg-config --libs fontconfig`  \
        `pkg-config --libs freetype2`
 
